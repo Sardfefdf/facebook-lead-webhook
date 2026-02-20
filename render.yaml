@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: facebook-lead-webhook
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: VERIFY_TOKEN
+        value: sar_leadgen_verify_2026
+      - key: SPREADSHEET_ID
+        value: 1p8UxlnNKSoTStyZb8m9mKMA9ShLhvOsPdy0NhGVxa6g
+      - key: SHEET_NAME
+        sync: false
+      - key: GOOGLE_CREDENTIALS
+        sync: false
+      - key: EMAIL_USER
+        sync: false
+      - key: EMAIL_PASSWORD
+        sync: false
